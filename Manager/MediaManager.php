@@ -10,9 +10,10 @@
  * please view the LICENSE file that was distributed with this source code.
  */
 
-namespace WellCommerce\Bundle\MediaBundle\Manager\Admin;
+namespace WellCommerce\Bundle\MediaBundle\Manager;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use WellCommerce\Bundle\CoreBundle\Manager\AbstractManager;
 use WellCommerce\Bundle\CoreBundle\Manager\Admin\AbstractAdminManager;
 use WellCommerce\Bundle\MediaBundle\Exception\InvalidMediaException;
 
@@ -21,7 +22,7 @@ use WellCommerce\Bundle\MediaBundle\Exception\InvalidMediaException;
  *
  * @author  Adam Piotrowski <adam@wellcommerce.org>
  */
-class MediaManager extends AbstractAdminManager
+class MediaManager extends AbstractManager
 {
     /**
      * Uploads the file
