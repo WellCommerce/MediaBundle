@@ -10,14 +10,19 @@
  * please view the LICENSE file that was distributed with this source code.
  */
 
-namespace WellCommerce\Bundle\MediaBundle\Exception;
+namespace WellCommerce\Bundle\MediaBundle\Uploader;
+
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use WellCommerce\Bundle\MediaBundle\Entity\MediaInterface;
 
 /**
- * Class InvalidMediaException
+ * Interface MediaUploaderInterface
  *
  * @author  Adam Piotrowski <adam@wellcommerce.org>
  */
-class InvalidMediaException extends \RuntimeException
+interface MediaUploaderInterface
 {
-    
+    public function upload(UploadedFile $file, $dir) : MediaInterface;
+
+    public function getUploadDir(string $dir) : string;
 }
